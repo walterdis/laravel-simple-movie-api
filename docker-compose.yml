@@ -1,0 +1,50 @@
+###############################################################################
+#                          Generated on phpdocker.io                          #
+###############################################################################
+version: "3.1"
+services:
+
+    memcached:
+      image: memcached:alpine
+      container_name: rpm-memcached
+
+    redis:
+      image: redis:alpine
+      container_name: rpm-redis
+
+    mysql:
+      image: mysql:8.0
+      container_name: rpm-mysql
+      working_dir: /application
+      volumes:
+        - .:/application
+      environment:
+        - MYSQL_ROOT_PASSWORD=root
+        - MYSQL_DATABASE=rpm
+        - MYSQL_USER=root
+        - MYSQL_PASSWORD=root
+      ports:
+        - "8003:3306"
+
+    elasticsearch:
+      image: elasticsearch:6.5.4
+      container_name: rpm-elasticsearch
+
+    webserver:
+      image: nginx:alpine
+      container_name: rpm-webserver
+      working_dir: /application
+      volumes:
+          - .:/application
+          - ./docker/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+      ports:
+       - "8001:80"
+
+    php-fpm:
+      build: docker/php-fpm
+      container_name: rpm-php-fpm
+      working_dir: /application
+      volumes:
+        - .:/application
+        - ./docker/php-fpm/php-ini-overrides.ini:/etc/php/7.4/fpm/conf.d/99-overrides.ini
+
