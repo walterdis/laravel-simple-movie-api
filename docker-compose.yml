@@ -6,21 +6,17 @@ services:
 
     memcached:
       image: memcached:alpine
-      container_name: rpm-memcached
-
-    redis:
-      image: redis:alpine
-      container_name: rpm-redis
+      container_name: infotv-memcached
 
     mysql:
       image: mysql:8.0
-      container_name: rpm-mysql
+      container_name: infotv-mysql
       working_dir: /application
       volumes:
         - .:/application
       environment:
         - MYSQL_ROOT_PASSWORD=root
-        - MYSQL_DATABASE=rpm
+        - MYSQL_DATABASE=infotv
         - MYSQL_USER=root
         - MYSQL_PASSWORD=root
       ports:
@@ -28,11 +24,11 @@ services:
 
     elasticsearch:
       image: elasticsearch:6.5.4
-      container_name: rpm-elasticsearch
+      container_name: infotv-elasticsearch
 
     webserver:
       image: nginx:alpine
-      container_name: rpm-webserver
+      container_name: infotv-webserver
       working_dir: /application
       volumes:
           - .:/application
@@ -42,7 +38,7 @@ services:
 
     php-fpm:
       build: docker/php-fpm
-      container_name: rpm-php-fpm
+      container_name: infotv-php-fpm
       working_dir: /application
       volumes:
         - .:/application
