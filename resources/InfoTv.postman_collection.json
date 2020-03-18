@@ -1,0 +1,505 @@
+{
+	"info": {
+		"_postman_id": "221cbd10-107b-46ee-baf4-19ee45a0fdf2",
+		"name": "InfoTv",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Movie",
+			"item": [
+				{
+					"name": "Movies - List /api/movies",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMVwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTU4NDU2NTc0OSwiZXhwIjoxNTg0NTY5MzQ5LCJuYmYiOjE1ODQ1NjU3NDksImp0aSI6IlkyMWlOUG9XNmJBaGJPQnciLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.0hjbDMRcMxYt26dtC10oQVkW56A_rGPj6HwktDveg6k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8001/api/movies/sort/desc",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"movies",
+								"sort",
+								"desc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Movies - Store /api/movies",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMVwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTU4NDU2NDIyNCwiZXhwIjoxNTg0NTY3ODI0LCJuYmYiOjE1ODQ1NjQyMjQsImp0aSI6ImVFdHJsSUhheDl2WWlDcXUiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.LwXeXWNPYo7OYwujVvrQTvP9lSiyEwDc0AI9rI_WPVA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "teste",
+									"type": "text"
+								},
+								{
+									"key": "filename",
+									"value": "the game",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "uploaded_file",
+									"type": "file",
+									"src": "/C:/Users/mistr/Downloads/fixture/DLP_PART_2_768k 6bm.avi",
+									"disabled": true
+								},
+								{
+									"key": "uploaded_file",
+									"type": "file",
+									"src": "/C:/Users/mistr/Downloads/fixture/dolbycanyon2mb.avi"
+								},
+								{
+									"key": "uploaded_file",
+									"type": "file",
+									"src": "/C:/Users/mistr/Downloads/setup-lightshot.exe",
+									"disabled": true
+								},
+								{
+									"key": "tags[]",
+									"value": "oxe",
+									"type": "text"
+								},
+								{
+									"key": "tags[]",
+									"value": "pipipi",
+									"type": "text"
+								},
+								{
+									"key": "tags[]",
+									"value": "aaaruuuu",
+									"type": "text"
+								},
+								{
+									"key": "tags[]",
+									"value": "keke",
+									"type": "text"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8001/api/movies",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Movies - Edit /api/movies/2",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMVwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTU4NDU2NTc0OSwiZXhwIjoxNTg0NTY5MzQ5LCJuYmYiOjE1ODQ1NjU3NDksImp0aSI6IlkyMWlOUG9XNmJBaGJPQnciLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.0hjbDMRcMxYt26dtC10oQVkW56A_rGPj6HwktDveg6k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "weeeaaa",
+									"type": "text"
+								},
+								{
+									"key": "tags[]",
+									"value": "keka",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "tags[]",
+									"value": "xaba",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "tags[]",
+									"value": "kiki",
+									"type": "text"
+								},
+								{
+									"key": "tags[]",
+									"value": "waka",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "tags[]",
+									"value": "pdspfd",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8001/api/movies/41",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"movies",
+								"41"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Movies - Destroy /api/movies",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMVwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTU4NDU2NDIyNCwiZXhwIjoxNTg0NTY3ODI0LCJuYmYiOjE1ODQ1NjQyMjQsImp0aSI6ImVFdHJsSUhheDl2WWlDcXUiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.LwXeXWNPYo7OYwujVvrQTvP9lSiyEwDc0AI9rI_WPVA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8001/api/movies/39",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"movies",
+								"39"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Tag",
+			"item": [
+				{
+					"name": "/api/tags",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMVwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTU4NDU2NzUzOSwiZXhwIjoxNTg0NTcxMTM5LCJuYmYiOjE1ODQ1Njc1MzksImp0aSI6ImlDMXNsb243RVZHbzAyanYiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.lgv3qnuF54Z_HZMAMYqi4Nb0q7vZp7sB29cvBvzxVAo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8001/api/tags",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"tags"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create /api/tags",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMVwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTU4NDA1ODEwNiwiZXhwIjoxNTg0MDYxNzA2LCJuYmYiOjE1ODQwNTgxMDYsImp0aSI6ImlmdUhxRXdmUDlNbHlFS24iLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.MTuz2jzy0lQ_cAVr33I1bscxbZpAVxWPMCSog6F3fAs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "name",
+								"value": "Vila Michele",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Horror",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8001/api/tags",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"tags"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update /api/tags/2",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMVwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTU4NDU2NzUzOSwiZXhwIjoxNTg0NTcxMTM5LCJuYmYiOjE1ODQ1Njc1MzksImp0aSI6ImlDMXNsb243RVZHbzAyanYiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.lgv3qnuF54Z_HZMAMYqi4Nb0q7vZp7sB29cvBvzxVAo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Comedy",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8001/api/tags/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"tags",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "REGISTER /api/register",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Walter",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "aaa",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "mistrim@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "confirm_password",
+							"value": "aaa",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:8001/api/register",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOGIN /api/auth/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "mistrim@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "aaa",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:8001/api/auth/login",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LIST /api/users",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMVwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTU4NDA1Mjk2OSwiZXhwIjoxNTg0MDU2NTY5LCJuYmYiOjE1ODQwNTI5NjksImp0aSI6IjkyUjNXdmxydmpNeVp1cTIiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.eOazXHKIHVHdvZ6xM-qGOcyuJPIZsWniBBxzKCxrkUQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8001/api/users",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
