@@ -27,7 +27,7 @@ class StoreMovieService
 
             $request->file('uploaded_file')
                 ->storeAs(
-                    $model->getStoragePath(), $model->getStoredFileName(), 'public'
+                    $model->getRelativeStoragePath(), $model->getStoredFileName(), 'public'
                 );
 
             $tags = $model->tags()->saveMany(
