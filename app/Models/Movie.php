@@ -45,7 +45,7 @@ class Movie extends Model
      * @author Walter Discher Cechinel <mistrim@gmail.com>
      * @return string
      */
-    public function getStoragePath(): string
+    public function getRelativeStoragePath(): string
     {
         return 'movies';
     }
@@ -57,5 +57,18 @@ class Movie extends Model
     public function getStoredFileName(): string
     {
         return $this->id . '_' . $this->filename;
+    }
+
+    /**
+     * @author Walter Discher Cechinel <mistrim@gmail.com>
+     * @return string
+     */
+    public function getRelativeStoredFile(): string
+    {
+        if (!$this->getStoredFileName()) {
+            throw new \BadMethodCallException('The given filename is invalid.');
+        }
+
+        return $this->getRelativeStoragePath() . DIRECTORY_SEPARATOR . $this->getStoredFileName();
     }
 }
