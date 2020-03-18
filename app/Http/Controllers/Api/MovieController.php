@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Movie\StoreMovieRequest;
 use App\Http\Requests\Movie\UpdateMovieRequest;
 use App\Http\Resources\Movie\MovieResource;
+use App\Http\Services\Movie\DestroyMovieService;
 use App\Http\Services\Movie\StoreMovieService;
 use App\Http\Services\Movie\UpdateMovieService;
 use App\Models\Movie;
@@ -96,10 +97,17 @@ class MovieController extends Controller
      *
      * @param int $id
      *
-     * @return Response
+     * @return array|ResponseFactory|Response
+     * @throws Throwable
      */
     public function destroy($id)
     {
-        //
+        try {
+            return DestroyMovieService::handle($id);
+        } catch (ModelNotFoundException | \Exception $e) {
+            return \response([
+                'data' => $e->getMessage(),
+            ], 400);
+        }
     }
 }
