@@ -9,7 +9,38 @@
 			"name": "Movie",
 			"item": [
 				{
-					"name": "Movies - List /api/movies",
+					"name": "Movies ASC - List /api/movies/sort/asc",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMVwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTU4NDU2NTc0OSwiZXhwIjoxNTg0NTY5MzQ5LCJuYmYiOjE1ODQ1NjU3NDksImp0aSI6IlkyMWlOUG9XNmJBaGJPQnciLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.0hjbDMRcMxYt26dtC10oQVkW56A_rGPj6HwktDveg6k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8001/api/movies/sort/asc",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"movies",
+								"sort",
+								"asc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Movies DESC - List /api/movies/sort/desc",
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -34,6 +65,35 @@
 								"movies",
 								"sort",
 								"desc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Movies List /api/movies",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMVwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTU4NDU2NTc0OSwiZXhwIjoxNTg0NTY5MzQ5LCJuYmYiOjE1ODQ1NjU3NDksImp0aSI6IlkyMWlOUG9XNmJBaGJPQnciLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.0hjbDMRcMxYt26dtC10oQVkW56A_rGPj6HwktDveg6k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8001/api/movies",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"movies"
 							]
 						}
 					},
@@ -476,7 +536,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMVwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTU4NDA1Mjk2OSwiZXhwIjoxNTg0MDU2NTY5LCJuYmYiOjE1ODQwNTI5NjksImp0aSI6IjkyUjNXdmxydmpNeVp1cTIiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.eOazXHKIHVHdvZ6xM-qGOcyuJPIZsWniBBxzKCxrkUQ",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMVwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTU4NDU2NzUzOSwiZXhwIjoxNTg0NTcxMTM5LCJuYmYiOjE1ODQ1Njc1MzksImp0aSI6ImlDMXNsb243RVZHbzAyanYiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.lgv3qnuF54Z_HZMAMYqi4Nb0q7vZp7sB29cvBvzxVAo",
 							"type": "string"
 						}
 					]
